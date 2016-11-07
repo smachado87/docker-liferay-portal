@@ -1,11 +1,6 @@
 FROM mdelapenya/jdk:8-openjdk
 MAINTAINER Manuel de la Peña <manuel.delapenya@liferay.com>
 
-RUN apt-get update \
-  && apt-get install curl \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 ENV LIFERAY_HOME=/usr/local/liferay-ce-portal-7.0-ga3
 
 RUN mkdir -p "$LIFERAY_HOME"
